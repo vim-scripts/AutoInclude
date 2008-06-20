@@ -1,0 +1,11 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2271
+
+This script allows you to automatically add the #include statements at the top of you *.{cc,hh} files.
+To use it, place the cursor on the type you need to include, then press <;;> and the corresponding #include statement will be added.
+In *.cc files, the correct #include is added, and in *.hh files, the forward declaration is added.
+
+Example:
+void myfunc (Foo* x);
+-> if you place the cursor on "Foo" and press <;;> (just the 2 semicolons), the #include "foo.hh" will be added at the top of the file. (The insertion location is specified by a variable, see Install Details).
+
+The naming standard used is "Foo" and "FooBar", for the FooBar class the #include will be: #include "foo-bar.hh".
